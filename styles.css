@@ -1,27 +1,32 @@
-/* Estilos generales */
+/* Estilo general para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Contenedor principal */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-}
-
-/* Estilos para el encabezado */
-h1 {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
     text-align: center;
-    color: #333;
 }
 
-/* Estilos de la lista */
+/* Título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Lista de la compra */
 .shopping-list {
     list-style-type: none;
     padding: 0;
@@ -30,33 +35,32 @@ h1 {
 .shopping-list li {
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
+}
+
+.shopping-list li:last-child {
+    border-bottom: none;
 }
 
 .shopping-list input[type="checkbox"] {
     margin-right: 10px;
 }
 
-/* Estilos para el botón de añadir */
-.add-item-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 20px;
+/* Estilo para el texto de la lista */
+.shopping-list label {
+    font-size: 1.1rem;
+    color: #555;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.add-item-btn:hover {
-    background-color: #45a049;
+/* Efecto al pasar el ratón por encima de los elementos */
+.shopping-list li:hover {
+    background-color: #f0f0f0;
 }
 
-.add-item-btn:active {
-    background-color: #388e3c;
+/* Estilo para cuando el checkbox está marcado */
+.shopping-list input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
 }
