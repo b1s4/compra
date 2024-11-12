@@ -9,20 +9,15 @@
 <body>
     <div class="container">
         <h1>Lista de la Compra</h1>
-
-        <!-- Lista donde se mostrarán los elementos -->
-        <ul id="shopping-list" class="shopping-list"></ul>
-
-        <!-- Botón para añadir un nuevo item a la lista -->
-        <button id="add-item-button" class="add-item-btn">Añadir Item</button>
+        <ul class="shopping-list">
+            <li><input type="checkbox" id="item1"> <label for="item1">Leche</label></li>
+            <li><input type="checkbox" id="item2"> <label for="item2">Pan</label></li>
+            <li><input type="checkbox" id="item3"> <label for="item3">Huevos</label></li>
+            <li><input type="checkbox" id="item4"> <label for="item4">Manzanas</label></li>
+            <li><input type="checkbox" id="item5"> <label for="item5">Tomates</label></li>
+            <li><input type="checkbox" id="item6"> <label for="item6">Arroz</label></li>
+            <li><input type="checkbox" id="item7"> <label for="item7">Pasta</label></li>
+        </ul>
     </div>
-
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-
-    <!-- Tu archivo JavaScript -->
-    <script src="script.js"></script>
 </body>
 </html>
