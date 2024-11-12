@@ -7,17 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="login-container" class="container">
-        <h1>Iniciar sesión</h1>
-        <form id="login-form">
-            <input type="text" id="username" placeholder="Usuario" required><br>
-            <input type="password" id="password" placeholder="Contraseña" required><br>
-            <button type="submit">Iniciar sesión</button>
-        </form>
-        <p id="login-error" class="error-message"></p>
-    </div>
-
-    <div id="shopping-list-container" class="container" style="display:none;">
+    <!-- Lista visible para todos -->
+    <div class="container" id="shopping-list-container">
         <h1>Lista de la Compra</h1>
         <ul class="shopping-list" id="shopping-list">
             <li><input type="checkbox" id="item1"> <label for="item1">Leche</label></li>
@@ -28,7 +19,23 @@
             <li><input type="checkbox" id="item6"> <label for="item6">Arroz</label></li>
             <li><input type="checkbox" id="item7"> <label for="item7">Pasta</label></li>
         </ul>
-        <button id="edit-button">Editar Lista</button>
+        <button id="edit-button" style="display:none;">Editar Lista</button> <!-- Botón de edición -->
+        <button id="add-item-button" style="display:none;">Añadir Elemento</button> <!-- Botón de añadir -->
+    </div>
+
+    <!-- Botón de login en la esquina -->
+    <button id="login-toggle" class="login-button">Iniciar sesión</button>
+
+    <!-- Formulario de login -->
+    <div id="login-container" class="login-container" style="display:none;">
+        <h2>Iniciar sesión</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Usuario" required><br>
+            <input type="password" id="password" placeholder="Contraseña" required><br>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <p id="login-error" class="error-message"></p>
+        <button id="close-login">Cerrar</button>
     </div>
 
     <script src="script.js"></script>
