@@ -62,7 +62,7 @@ document.getElementById("add-item-button").addEventListener("click", function() 
     if (newItem) {
         db.collection("listasCompra").add({
             name: newItem,
-            checked: false
+            checked: false // El estado inicial es "no marcado"
         }).then(() => {
             cargarLista(); // Recargar lista después de añadir un nuevo elemento
         });
@@ -78,9 +78,9 @@ document.getElementById("shopping-list").addEventListener("dblclick", function(e
         // Eliminar de Firestore
         db.collection("listasCompra").where("name", "==", itemName).get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                doc.ref.delete();
+                doc.ref.delete(); // Elimina el ítem de Firestore
             });
-            liToDelete.remove();
+            liToDelete.remove(); // Elimina el ítem de la lista en la página
         });
     }
 });
