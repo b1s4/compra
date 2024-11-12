@@ -1,0 +1,66 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Lista de la compra */
+.shopping-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.shopping-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.shopping-list li:last-child {
+    border-bottom: none;
+}
+
+.shopping-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Estilo para el texto de la lista */
+.shopping-list label {
+    font-size: 1.1rem;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el ratón por encima de los elementos */
+.shopping-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para cuando el checkbox está marcado */
+.shopping-list input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
+}
